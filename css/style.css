@@ -163,6 +163,44 @@ ul
 {
     transform: scale(1.05);
 }
+.home .social-media a img
+{
+    display: inline-flex;
+    align-items: center;
+    max-width: fit-content;
+    max-height: fit-content;
+    height: 3rem;
+    border-radius:"50%";
+    box-shadow: 0 .2rem .5rem var(white);
+    color: var(--skin-color);
+    margin: 2.5rem 1.5rem 3rem 0;
+    animation: slideimgsocial 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.home .social-media
+{
+    display: block;
+}
+@keyframes slideimgsocial
+{
+    0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.25);
+      }
+      100% {
+        transform: scale(1);
+      }
+} 
+.social-media a img{
+border-radius: 50%;
+}
+.home .social-media a img:hover
+{
+    transform: scale(1.5);
+}
 .shadow-dark
 {
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
@@ -625,13 +663,13 @@ h3.my-profession
 .service .container
 {
     padding-bottom: 40px;
-
 }
 .service .service-item
 {
     margin-bottom: 30px;
     flex: 0 0 33.33%;
     max-width: 33.33%;
+
 } 
 .service .service-item .service-item-inner 
 {
@@ -641,6 +679,7 @@ h3.my-profession
     padding: 30px 15px;
     text-align: center;
     transition: all 0.3s ease;
+
 }
 .service .service-item .service-item-inner:hover
 {
@@ -718,7 +757,13 @@ h3.my-profession
 {
 
     width: 100%;
+    height: 33.33% ;
     display: block;
+    transition: all 0.5s ease;
+}
+.portfolio .portfolio-item-inner .portfolio-img img:hover
+{
+    transform: scale(1.5);
 }
 
 /* contact */
@@ -933,7 +978,7 @@ h3.my-profession
         transform: scale(1);
       }
 }  
-.about .about-content .personal-info .row
+.about .about-content .personal-info .row 
 {
     display: block;
     align-content: center;
@@ -951,9 +996,29 @@ h3.my-profession
     text-align: center;
     margin-left: 25px;
 }
+.about .about-content .personal-info .row .buttons
+{
+    margin-left: 25px;
+    align-items: center;
+}
+.about .about-content .personal-info .row .btn
+{
+    display: block;
+    align-content: center;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-right: 0;
+
+
+}
+
 @keyframes slideSection
 {
 
 }  
-
+.home .social-media
+{
+    display: none
+}
 }
