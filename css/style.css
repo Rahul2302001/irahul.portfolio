@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600&display=swap');
 
-:root 
+body.dark
 {
     --bg-black-900:#f2f2fc;
     --bg-black-100:#fdf9ff;
@@ -9,7 +9,7 @@
     --text-black-700:#504e70;
 
 }
-body.dark 
+:root 
 {
     
     --bg-black-900:#151515;
@@ -71,15 +71,13 @@ ul
 }
 @keyframes slideSection
 {
-    0%
-    {
-    transform: translateX(100%);
-    }
-    100%
-    {
-    transform: translateX(0%);
-    }
-}
+    from {
+        transform:(0turn);
+      }
+      to {
+        transform: rotate(1turn);
+      }
+}     
 .hidden
 {
     display: none !important;
@@ -357,27 +355,36 @@ h3.my-profession
     max-width: 40%;
     text-align: center;
     position: relative;
-}.home-img::after
+}
+.home-img::after
 {
     content: '';
     position: absolute;
+    display: block;
     height: 80px;
     width: 80px;
     border-bottom: 10px solid var(--skin-color);
     border-right: 10px solid var(--skin-color);
-    right: 20px;
-    bottom: -40px;
+    right: 50px;
+    bottom: 50px;
+    animation: slideimgborder 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 .home-img::before
 {
     content: '';
     position: absolute;
+    display: block;
     height: 80px;
     width: 80px;
     border-top: 10px solid var(--skin-color);
     border-left: 10px solid var(--skin-color);
-    left: 20px;
+    left: 50px;
     top: -40px;
+    animation: slideimgborder 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 .home .home-img img
 {
@@ -385,6 +392,36 @@ h3.my-profession
     border-radius: 10px;
     height: 400px;
 }
+.home .home-img img
+{
+    animation: slideimg 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes slideimg
+{
+    0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+}  
+@keyframes slideimgborder
+{
+    0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.25);
+      }
+      100% {
+        transform: scale(1);
+      }
+}  
 /* About */
 .about .about-content
 {
@@ -851,4 +888,72 @@ h3.my-profession
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .home .home-img
+{
+    display: block;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    position: left;
+}
+    .home-img::after
+    {
+        content: none;
+    }
+    .home-img::before
+    {
+        content: none;
+    }
+.home .home-img img
+{
+    margin: auto;
+    border-radius: 50px;
+    height: 300px;
+    position: relative;
+}
+.home .home-img img
+{
+    animation: slideimg 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.home .btn {
+    display: none;
+}
+
+@keyframes slideimg
+{
+    0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.25);
+      }
+      100% {
+        transform: scale(1);
+      }
+}  
+.about .about-content .personal-info .row
+{
+    display: block;
+    align-content: center;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-right: 0;
+
+
+}
+.about .about-content .personal-info .info-items
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-left: 25px;
+}
+@keyframes slideSection
+{
+
+}  
+
 }
