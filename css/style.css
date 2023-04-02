@@ -404,7 +404,7 @@ h3.my-profession
     border-bottom: 10px solid var(--skin-color);
     border-right: 10px solid var(--skin-color);
     right: 50px;
-    bottom: 50px;
+    bottom: -40px;
     animation: slideimgborder 4000ms;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
@@ -419,7 +419,7 @@ h3.my-profession
     border-top: 10px solid var(--skin-color);
     border-left: 10px solid var(--skin-color);
     left: 50px;
-    top: -40px;
+    top: 110px;
     animation: slideimgborder 4000ms;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
@@ -429,6 +429,7 @@ h3.my-profession
     margin: auto;
     border-radius: 10px;
     height: 400px;
+    margin-top: 150px;
 }
 .home .home-img img
 {
